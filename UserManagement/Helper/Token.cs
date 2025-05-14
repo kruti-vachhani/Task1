@@ -9,16 +9,15 @@ public class Token
 {
     public static string GenerateJwtToken(string userId, string userName, string Role)
     {
-
-        var claims = new[]
-        {
+        Claim[]? claims = new[]
+       {
             new Claim(ClaimTypes.NameIdentifier, userId),
             new Claim(ClaimTypes.Name, userName),
             new Claim(ClaimTypes.Role, Role),
         };
 
-        var TokenHandler = new JwtSecurityTokenHandler();
-        var key = Encoding.ASCII.GetBytes("ThisIsTheSecretKeyofGeneratingTheJwtTokenForSecurityPurpose");
+        JwtSecurityTokenHandler? TokenHandler = new JwtSecurityTokenHandler();
+        byte[]? key = Encoding.ASCII.GetBytes("ThisIsTheSecretKeyofGeneratingTheJwtTokenForSecurityPurpose");
 
         SecurityTokenDescriptor? TokenDescriptor = new SecurityTokenDescriptor
         {
@@ -26,11 +25,10 @@ public class Token
             Expires = DateTime.UtcNow.AddDays(30),
             SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
         };
+
         SecurityToken? Token = TokenHandler.CreateJwtSecurityToken(TokenDescriptor);
         return TokenHandler.WriteToken(Token);
     }
-
-
 }
 
 

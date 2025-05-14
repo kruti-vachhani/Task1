@@ -1,21 +1,16 @@
 using System.Text;
-using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using ThePizzaShop.Helper;
-using UserManagement.Helper;
 using UserManagement.Models;
 
-var builder = WebApplication.CreateBuilder(args);
+WebApplicationBuilder? builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<UserManagementDbContext>(options =>
         options.UseNpgsql(builder.Configuration.GetConnectionString("myconn")));
-
-
-// builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie();
 
 
 builder.Services.AddAuthentication(
@@ -33,12 +28,11 @@ builder.Services.AddAuthentication(
 
 builder.Services.AddAuthorization();
 
-var app = builder.Build();
+ WebApplication? app = builder.Build();
 
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
-
     app.UseHsts();
 }
 

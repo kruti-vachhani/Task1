@@ -1,5 +1,4 @@
-﻿
-using System.Security.Claims;
+﻿using System.Security.Claims;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -22,6 +21,7 @@ public class HomeController : Controller
         return View();
     }
 
+
     public IActionResult Logout()
     {
         int userId = Convert.ToInt32(User.FindFirstValue(ClaimTypes.NameIdentifier));
@@ -30,8 +30,5 @@ public class HomeController : Controller
 
         return RedirectToAction("Index", "Auth");
     }
-
-
-
 
 }

@@ -26,6 +26,7 @@ public class AuthController : Controller
         return View();
     }
 
+
     [HttpPost]
     public IActionResult Index(LoginPersonViewModel loginPersonViewModel)
     {
@@ -42,7 +43,7 @@ public class AuthController : Controller
             return View();
         }
 
-        var token = Token.GenerateJwtToken(person.Id.ToString(), person.Username, person.Role);
+        string? token = Token.GenerateJwtToken(person.Id.ToString(), person.Username, person.Role);
 
         CookieOptions? cookieOptions = new CookieOptions
         {

@@ -8,10 +8,14 @@ body,html {
     background-color: #ffffff;
 }
 
+
 .login-form-wrapper {
     width: 80%;
     max-width: 1400px;
+    box-shadow: 0px 0px 35px rgb(165, 165, 165);
+    border: 0.4px solid rgb(165, 164, 164) ;
 }
+
 
 .form-control {
     background-color: #ffffff;
