@@ -46,7 +46,7 @@ public class AuthController : Controller
 
         CookieOptions? cookieOptions = new CookieOptions
         {
-            Expires = DateTime.Now.AddHours(24),
+            Expires =loginPersonViewModel.RememberMe ? DateTime.Now.AddDays(30) : DateTime.Now.AddHours(24),
             HttpOnly = true,
             IsEssential = true
         };

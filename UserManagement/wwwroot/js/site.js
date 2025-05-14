@@ -1,4 +1,11 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿$(".password-toggle-icon").on("click", function () {
+  var passwordField = $(this).siblings(".login-password");
 
-// Write your JavaScript code.
+  if (passwordField.attr("type") === "password") {
+    passwordField.attr("type", "text");
+    $(this).removeClass("fa-eye-slash").addClass("fa-eye");
+  } else {
+    passwordField.attr("type", "password");
+    $(this).removeClass("fa-eye").addClass("fa-eye-slash");
+  }
+});

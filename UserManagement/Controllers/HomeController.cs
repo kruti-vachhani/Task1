@@ -25,18 +25,13 @@ public class HomeController : Controller
     public IActionResult Logout()
     {
         int userId = Convert.ToInt32(User.FindFirstValue(ClaimTypes.NameIdentifier));
-        Console.WriteLine("Id............." + userId);
-
         Response.Cookies.Delete("AuthToken");
         TempData["success"] = "Logout successful!";
 
         return RedirectToAction("Index", "Auth");
     }
 
-    public IActionResult Privacy()
-    {
-        return View();
-    }
+
 
 
 }

@@ -23,7 +23,7 @@ public class Token
         SecurityTokenDescriptor? TokenDescriptor = new SecurityTokenDescriptor
         {
             Subject = new ClaimsIdentity(claims),
-            Expires = DateTime.UtcNow.AddDays(1),
+            Expires = DateTime.UtcNow.AddDays(30),
             SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
         };
         SecurityToken? Token = TokenHandler.CreateJwtSecurityToken(TokenDescriptor);

@@ -4,8 +4,6 @@ body,html {
     padding: 0;
 }
 
-
-
 .filled-btn {
     background-color: #455adc;
     border-color: #455adc;
@@ -29,4 +27,11 @@ body,html {
     background-color: #455adc;
     border-color: #455adc;
     color: #ffffff;
+}
+
+.errorContainer{
+  height: 40%;
+  width: 30%;
+  border: 2px solid black;
+   box-shadow: 5px 5px 8px rgb(165, 165, 165);
 }
