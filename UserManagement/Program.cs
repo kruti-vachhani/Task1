@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using ThePizzaShop.Helper;
+using UserManagement.Helper;
 using UserManagement.Models;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -31,7 +32,6 @@ builder.Services.AddAuthentication(
         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("ThisIsTheSecretKeyofGeneratingTheJwtTokenForSecurityPurpose"))
     };
 });
-
 
 builder.Services.AddAuthorization();
 

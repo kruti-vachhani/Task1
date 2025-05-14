@@ -31,35 +31,6 @@ public class Token
     }
 
 
-    public static object DecodeToken(string tokenValue)
-    {
-        JwtSecurityTokenHandler? TokenHandler = new JwtSecurityTokenHandler();
-        byte[]? key = Encoding.ASCII.GetBytes("ThisIsTheSecretKeyofGeneratingTheJwtTokenForSecurityPurpose");
-
-        ClaimsPrincipal claimsPrincipal = TokenHandler.ValidateToken(tokenValue, new TokenValidationParameters
-        {
-            ValidateIssuer = false,
-            ValidateAudience = false,
-            ValidateLifetime = true,
-            ValidateIssuerSigningKey = true,
-            IssuerSigningKey = new SymmetricSecurityKey(key)
-        }, out SecurityToken validatedToken);
-
-        JwtSecurityToken? jwttoken = (JwtSecurityToken)validatedToken;
-        string? id = claimsPrincipal.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-        string? userName = claimsPrincipal.FindFirst(ClaimTypes.Name)?.Value;
-        string? role = claimsPrincipal.FindFirst(ClaimTypes.Role)?.Value;
-
-        Object decodeToken = new
-        {
-            Id = id,
-            Username = userName,
-            Role = role
-        };
-
-        return decodeToken;
-    }
-
 }
 
 
