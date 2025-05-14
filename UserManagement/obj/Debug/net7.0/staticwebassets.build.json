@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "/C0z6YS9QXmQtoPTfWFztPoLw9RlHDLGLqNFTeS0MpM=",
+  "Hash": "TE3dRBoWEy9gTJDzWDnL1y/FsymRw3EPxom5NFlvH4U=",
   "Source": "UserManagement",
   "BasePath": "_content/UserManagement",
   "Mode": "Default",
@@ -51,6 +51,23 @@
       "OriginalItemSpec": "E:\\PCTR25\\Task1\\UserManagement\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\UserManagement.bundle.scp.css"
     },
     {
+      "Identity": "E:\\PCTR25\\Task1\\UserManagement\\wwwroot\\css\\auth.css",
+      "SourceId": "UserManagement",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\PCTR25\\Task1\\UserManagement\\wwwroot\\",
+      "BasePath": "_content/UserManagement",
+      "RelativePath": "css/auth.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\auth.css"
+    },
+    {
       "Identity": "E:\\PCTR25\\Task1\\UserManagement\\wwwroot\\css\\site.css",
       "SourceId": "UserManagement",
       "SourceType": "Discovered",
@@ -83,6 +100,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "E:\\PCTR25\\Task1\\UserManagement\\wwwroot\\images\\loginImage.png",
+      "SourceId": "UserManagement",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\PCTR25\\Task1\\UserManagement\\wwwroot\\",
+      "BasePath": "_content/UserManagement",
+      "RelativePath": "images/loginImage.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\loginImage.png"
     },
     {
       "Identity": "E:\\PCTR25\\Task1\\UserManagement\\wwwroot\\js\\site.js",

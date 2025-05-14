@@ -5,12 +5,20 @@
       "PackagePath": "staticwebassets\\UserManagement.bundle.scp.css"
     },
     {
+      "Id": "E:\\PCTR25\\Task1\\UserManagement\\wwwroot\\css\\auth.css",
+      "PackagePath": "staticwebassets\\css\\auth.css"
+    },
+    {
       "Id": "E:\\PCTR25\\Task1\\UserManagement\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
       "Id": "E:\\PCTR25\\Task1\\UserManagement\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "E:\\PCTR25\\Task1\\UserManagement\\wwwroot\\images\\loginImage.png",
+      "PackagePath": "staticwebassets\\images\\loginImage.png"
     },
     {
       "Id": "E:\\PCTR25\\Task1\\UserManagement\\wwwroot\\js\\site.js",

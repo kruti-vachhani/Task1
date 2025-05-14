@@ -55,7 +55,7 @@ namespace UserManagement.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Students");
+                    b.ToTable("Persons");
                 });
 #pragma warning restore 612, 618
         }

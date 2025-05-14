@@ -1,0 +1,32 @@
+@using UserManagement.Models.ViewModels;
+@model LoginPersonViewModel;
+
+@{
+    ViewData["Title"] = "Login";
+    Layout = "_AuthLayout";
+}
+
+<form class="login-form w-100" method="post" asp-controller="Auth" asp-action="Index">
+
+    <div class="form-group">
+        <div class="form-floating mb-3">
+            <input type="email" class="form-control" placeholder="abc@gmail.com" asp-for="Email">
+            <label for="floatingPassword" asp-for="Email">Email</label>
+            <span class="text-danger" asp-validation-for="Email"></span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="form-floating mb-4">
+            <input type="password" class="form-control login-password" placeholder="Password" asp-for="Password">
+            <label for="floatingPassword" asp-for="Password"> Password</label>
+            <i class="fa fa-eye-slash password-toggle-icon" style="font-size: 17px; color: #696969 ;"></i>
+            <span class="text-danger login-password-error" asp-validation-for="Password"></span>
+        </div>
+    </div>
+
+
+    <div class="mb-md-2 mb-1">
+        <input type="submit" value="Submit" class="btn w-100" style="background-color: #455adc;color: white;">
+    </div>
+</form>

@@ -42,3 +42,11 @@ E:\PCTR25\Task1\UserManagement\obj\Debug\net7.0\refint\UserManagement.dll
 E:\PCTR25\Task1\UserManagement\obj\Debug\net7.0\UserManagement.pdb
 E:\PCTR25\Task1\UserManagement\obj\Debug\net7.0\UserManagement.genruntimeconfig.cache
 E:\PCTR25\Task1\UserManagement\obj\Debug\net7.0\ref\UserManagement.dll
+E:\PCTR25\Task1\UserManagement\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+E:\PCTR25\Task1\UserManagement\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+E:\PCTR25\Task1\UserManagement\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+E:\PCTR25\Task1\UserManagement\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+E:\PCTR25\Task1\UserManagement\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+E:\PCTR25\Task1\UserManagement\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+E:\PCTR25\Task1\UserManagement\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
+E:\PCTR25\Task1\UserManagement\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll

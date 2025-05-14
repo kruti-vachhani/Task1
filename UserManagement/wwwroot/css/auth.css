@@ -1,0 +1,39 @@
+body,html {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.login-container {
+    background-color: #ffffff;
+}
+
+.login-form-wrapper {
+    width: 80%;
+    max-width: 1400px;
+}
+
+.form-control {
+    background-color: #ffffff;
+    font-size: 15px;
+    border-radius: 0px !important;
+}
+
+.form-check-input:checked {
+    background-color: #455adc !important;
+} 
+
+input{
+    box-shadow: none !important;
+}
+
+input:focus{
+    border-color: #455adc !important;
+}
+
+.password-toggle-icon {
+    float: right;
+    cursor: pointer;
+    margin-right: 25px;
+    margin-top: -41px;
+} 

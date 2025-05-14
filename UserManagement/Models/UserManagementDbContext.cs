@@ -10,5 +10,5 @@ public class UserManagementDbContext : DbContext
     {
     }
     
-    public DbSet<Persons> Students { get; set; }
+    public DbSet<Persons> Persons { get; set; }
 }
