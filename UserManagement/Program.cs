@@ -15,14 +15,12 @@ builder.Services.AddDbContext<UserManagementDbContext>(options =>
         options.UseNpgsql(builder.Configuration.GetConnectionString("myconn")));
 
 
-builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie();
+// builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie();
 
 
 builder.Services.AddAuthentication(
-  options =>{
-    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-}).AddJwtBearer(options =>
+      JwtBearerDefaults.AuthenticationScheme
+).AddJwtBearer(options =>
 {
     options.TokenValidationParameters = new TokenValidationParameters
     {
@@ -43,6 +41,8 @@ if (!app.Environment.IsDevelopment())
 
     app.UseHsts();
 }
+
+app.UseStatusCodePagesWithReExecute("/Error/Index", "?statusCode={0}");
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();

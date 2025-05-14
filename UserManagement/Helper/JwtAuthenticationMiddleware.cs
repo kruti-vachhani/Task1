@@ -1,5 +1,7 @@
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
+using System.Text;
+using Microsoft.IdentityModel.Tokens;
 
 namespace ThePizzaShop.Helper;
 
@@ -20,15 +22,23 @@ public class JwtAuthenticationMiddleware
         {
             try
             {
+                var key = Encoding.UTF8.GetBytes("ThisIsTheSecretKeyofGeneratingTheJwtTokenForSecurityPurpose");
+
                 JwtSecurityTokenHandler handler = new JwtSecurityTokenHandler();
-                JwtSecurityToken jwtToken = handler.ReadJwtToken(token);
-                
-                ClaimsIdentity claimsIdentity = new ClaimsIdentity(jwtToken.Claims, "jwt");
-                ClaimsPrincipal claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
+
+                var claimsPrincipal = handler.ValidateToken(token, new TokenValidationParameters
+                {
+                    ValidateIssuer = false,
+                    ValidateAudience = false,
+                    ValidateLifetime = true,
+                    IssuerSigningKey = new SymmetricSecurityKey(key),
+                    ValidateIssuerSigningKey = true
+                }, out SecurityToken validatedToken);
+
                 context.User = claimsPrincipal;
 
-                 Claim?  roleClaim = jwtToken.Claims.FirstOrDefault(r => r.Type == ClaimTypes.Role);
-                 Claim?  userName = jwtToken.Claims.FirstOrDefault(r => r.Type == ClaimTypes.Name);
+                Claim? roleClaim = claimsPrincipal.Claims.FirstOrDefault(r => r.Type == ClaimTypes.Role);
+                Claim? userName = claimsPrincipal.Claims.FirstOrDefault(r => r.Type == ClaimTypes.Name);
 
                 if (roleClaim != null)
                 {

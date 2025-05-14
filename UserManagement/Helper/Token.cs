@@ -26,7 +26,7 @@ public class Token
             Expires = DateTime.UtcNow.AddDays(1),
             SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
         };
-        SecurityToken? Token = TokenHandler.CreateToken(TokenDescriptor);
+        SecurityToken? Token = TokenHandler.CreateJwtSecurityToken(TokenDescriptor);
         return TokenHandler.WriteToken(Token);
     }
 

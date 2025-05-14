@@ -5,14 +5,13 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace UserManagement.Controllers;
 
-[Authorize]
+[Authorize(Roles = "User")]
 public class HomeController : Controller
 {
 
     public IActionResult Index()
     {
         string? role = HttpContext.Items["Role"]?.ToString();
-        Console.WriteLine("Role....." + role);
         string? token = Request.Cookies["AuthToken"];
 
         if (string.IsNullOrEmpty(token))

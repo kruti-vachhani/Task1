@@ -8,7 +8,6 @@ namespace UserManagement.Controllers;
 public class AuthController : Controller
 {
 
-    private readonly Token _token;
     private readonly UserManagementDbContext _context;
 
     public AuthController(UserManagementDbContext context)
